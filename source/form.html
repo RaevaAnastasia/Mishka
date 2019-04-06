@@ -24,82 +24,76 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page__title">Вязание на заказ</h1>
-      <p class="page__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <h1 class="page-title">Вязание на заказ</h1>
+      <p class="page-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page-main__form form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="form__radio-set radio-set">
           <legend class="form__title">Тип</legend>
-          <ul class="form__radio-list radio-list site-list">
-            <li class="radio-list__item">
+            <p class="radio-set__item">
               <input class="visually-hidden" type="radio" name="type" id="accessory" value="accessory" checked>
-              <label class="form__item-title radio-title" for="accessory">Аксессуар для интерьера</label>
-            </li>
-            <li class="radio-list__item">
+              <label class="form__item-title" for="accessory">Аксессуар для интерьера</label>
+            </p>
+            <p class="radio-set__item">
               <input class="visually-hidden" type="radio" name="type" id="toy" value="toy">
-              <label class="form__item-title radio-title" for="toy">Детская игрушка</label>
-            </li>
-          </ul>
+              <label class="form__item-title" for="toy">Детская игрушка</label>
+            </p>
         </fieldset>
         <fieldset class="form__checkbox-set checkbox-set">
           <legend class="form__title set-title">Цвет</legend>
-          <ul class="form__checkbox-list checkbox-list site-list">
-            <li class="checkbox-list__item">
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="white" id="white" checked>
-              <label class="form__item-title checkbox-title" for="white">Белый</label>
-            </li>
-            <li class="checkbox-list__item">
+              <label class="form__item-title" for="white">Белый</label>
+            </p>
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="gray" id="gray" checked>
-              <label class="form__item-title checkbox-title" for="gray">Серый</label>
-            </li>
-            <li class="checkbox-list__item">
+              <label class="form__item-title" for="gray">Серый</label>
+            </p>
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-              <label class="form__item-title checkbox-title" for="tiffany">«Тиффани»</label>
-            </li>
-            <li class="checkbox-list__item">
+              <label class="form__item-title" for="tiffany">«Тиффани»</label>
+            </p>
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="black" id="black">
-              <label class="form__item-title checkbox-title" for="black">Черный</label>
-            </li>
-            <li class="checkbox-list__item">
+              <label class="form__item-title" for="black">Черный</label>
+            </p>
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="pink" id="pink">
-              <label class="form__item-title checkbox-title" for="pink">Розовый</label>
-            </li>
-            <li class="checkbox-list__item">
+              <label class="form__item-title" for="pink">Розовый</label>
+            </p>
+            <p class="checkbox-set__item">
               <input class="visually-hidden" type="checkbox" name="orange" id="orange">
-              <label class="form__item-title checkbox-title" for="orange">Оранжевый</label>
-            </li>
-          </ul>
+              <label class="form__item-title" for="orange">Оранжевый</label>
+            </p>
         </fieldset>
         <fieldset class="form___personal-info">
           <legend class="form__title set-title">ФИО</legend>
-          <ul class="form__personal-list personal-list site-list">
-            <li class="personal-list__item">
-              <label class="form__field-title field-title" for="name">Имя:</label>
+            <p class="form__field-wrap">
+              <label class="form__field-title" for="name">Имя:</label>
               <input class="form__field" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-            </li>
-            <li class="personal-list__item">
-              <label class="form__field-title field-title" for="surname">Фамилия:</label>
+            </p>
+            <p class="form__field-wrap">
+              <label class="form__field-title" for="surname">Фамилия:</label>
               <input class="form__field" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
-            </li>
-            <li class="personal-list__item">
-              <label class="form__field-title field-title" for="patronymic">Отчество:</label>
+            </p>
+            <p class="form__field-wrap">
+              <label class="form__field-title" for="patronymic">Отчество:</label>
               <input class="form__field" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
-            </li>
-            <li class="personal-list__item">
+            </p>
+            <p class="form__field-wrap">
               <label class="form__title set-title" for="tel">тел</label>
               <input class="form__field form__field--tel" type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-            </li>
-            <li class="personal-list__item">
+            </p>
+            <p class="form__field-wrap">
               <label class="form__title set-title" for="email">E-mail</label>
               <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
-            </li>
-            <li class="personal-list__item">
+            </p>
+            <p class="form__field-wrap">
               <label class="form__title set-title" for="wishes">Доп</label>
               <textarea class="form__textbox-field" name="wishes" id="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </li>
-          </ul>
+            </p>
         </fieldset>
         <p class="form__prompt">*Поля обязательны для заполнения</p>
-        <button class="form__button button" type="submit">Отправить заказ</button>
+        <button class="form__button button">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">

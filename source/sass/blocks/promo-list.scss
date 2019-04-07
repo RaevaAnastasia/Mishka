@@ -1,21 +1,19 @@
-.promo-list__item:first-child {
-  background-color: $tiffany-color;
-}
-
-.promo-list__item:last-child {
-  background-color: hsl(171, 48%, 55%);
-}
-
 .promo-list__link {
   display: block;
   padding: 30px 185px 30px 30px;
-  font-size: 19px;
-  line-height: 24px;
-  font-weight: 700;
+  @include font-params(19px, 24px);
   color: hsl(0, 0%, 100%);
   text-decoration: none;
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--light-background {
+    background-color: $tiffany-color;
+  }
+
+  &--dark-background {
+    background-color: hsl(171, 48%, 55%);
   }
 }

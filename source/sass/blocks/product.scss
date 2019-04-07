@@ -1,6 +1,5 @@
 .product {
   border: 1px solid rgba(236, 236, 236, 1);
-  margin: 30px;
 
   &:hover,
   &:focus {
@@ -12,10 +11,12 @@
   }
 }
 
+.product__img {
+  width: 100%;
+}
+
 .product__title-link {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
+  @include font-params(17px, 24px);
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
 
@@ -30,12 +31,9 @@
 }
 
 .product__description {
-  font-size: 13px;
-  line-height: 30px;
+  @include font-params(13px, 30px);
 }
 
 .product__price {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 700;
+  @include font-params(15px, 24px);
 }

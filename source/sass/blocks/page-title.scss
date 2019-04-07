@@ -1,7 +1,5 @@
 .page-title {
   padding: 76px 40px;
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: 700;
+  @include font-params(27px, 30px);
   background-color: $gray-color;
 }

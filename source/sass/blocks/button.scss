@@ -2,8 +2,7 @@
   display: inline-block;
   vertical-align: top;
   padding: 20px 85px;
-  font-size: 17px;
-  line-height: 24px;
+  @include font-params(17px, 24px);
   text-align: center;
   color: $dark-gray;
   font-weight: 700;

@@ -1,35 +1,40 @@
 .best-product {
-  padding: 35px;
+  margin: 35px;
 }
 
 .best-product__title {
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 700;
+  @include reset;
+  @include font-params(25px, 30px);
+  margin-bottom: 8px;
 }
 
 .best-product__subtitle {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
+  @include reset;
+  margin-bottom: 30px;
+  @include font-params(17px, 20px);
   color: $tiffany-color;
 }
 
 .best-product__description {
-  font-size: 15px;
-  line-height: 24px;
+  @include reset;
+  margin-bottom: 30px;
+  @include font-params(15px, 24px);
   color: $dark-gray;
 }
 
 .best-product__table {
-  font-size: 15px;
-  line-height: 20px;
+  @include font-params(15px, 20px);
   color: $dark-gray;
 }
 
 .best-product__price {
-  font-size: 17px;
-  line-height: 24px;
+  @include reset;
+  margin-bottom: 30px;
+  @include font-params(17px, 24px);
   color: $dark-gray;
-  font-weight: 700;
+}
+
+.best-product__img {
+  @include reset;
+  margin-bottom: 30px;
 }

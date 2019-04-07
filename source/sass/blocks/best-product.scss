@@ -11,6 +11,7 @@
 .best-product__subtitle {
   @include reset;
   margin-bottom: 30px;
+
   @include font-params(17px, 20px);
   color: $tiffany-color;
 }
@@ -18,6 +19,7 @@
 .best-product__description {
   @include reset;
   margin-bottom: 30px;
+
   @include font-params(15px, 24px);
   color: $dark-gray;
 }
@@ -30,6 +32,7 @@
 .best-product__price {
   @include reset;
   margin-bottom: 30px;
+
   @include font-params(17px, 24px);
   color: $dark-gray;
 }

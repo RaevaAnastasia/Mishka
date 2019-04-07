@@ -5,6 +5,7 @@
 .page-header__description {
   padding: 76px 15% 120px 15%;
   margin: 0;
+
   @include font-params(27px, 30px);
   text-align: center;
   background-color: hsl(0, 0%, 98%);

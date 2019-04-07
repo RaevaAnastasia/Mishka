@@ -2,6 +2,7 @@
   display: inline-block;
   vertical-align: top;
   padding: 20px 85px;
+
   @include font-params(17px, 24px);
   text-align: center;
   color: $dark-gray;

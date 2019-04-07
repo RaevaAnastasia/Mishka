@@ -69,6 +69,12 @@
           </li>
         </ul>
       </section>
+      <section class="process">
+        <h2 class="process__title">Процесс производства</h2>
+        <img class="process__img" src="img/process.jpg" width="260" height="150" alt="Вязанная голубая корзинка">
+        <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="process__to-order button" href="#">Сделать заказ</a>
+      </section>
     </main>
     <footer class="page-footer">
       <ul class="page-footer__social social site-list">
@@ -88,5 +94,26 @@
         </a>
       </p>
     </footer>
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <label class="modal__label" for="size-small">S</label>
+            <input class="visually-hidden" type="radio" name="size" id="size-small" value="S" checked>
+          </li>
+          <li class="modal__item">
+            <label class="modal__label" for="size-middle">M</label>
+            <input class="visually-hidden" type="radio" name="size" id="size-middle" value="M">
+          </li>
+          <li class="modal__item">
+            <label class="modal__label" for="size-large">L</label>
+            <input class="visually-hidden" type="radio" name="size" id="size-large" value="L">
+          </li>
+        </ul>
+        <button class="modal__button button button--green-theme">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>

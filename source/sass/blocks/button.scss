@@ -10,11 +10,13 @@
   text-decoration: none;
   border: 2px solid $dark-gray;
   background-color: hsl(0, 0%, 100%);
+
   &:hover,
   &:focus {
     color: hsl(0, 0%, 100%);
     background-color: $dark-gray;
   }
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: $dark-gray;

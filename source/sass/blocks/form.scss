@@ -1,22 +1,22 @@
 .form__title {
-	color: $tiffany-color;
-	@include font-params(17px, 16px);
-	text-transform: uppercase;
+  color: $tiffany-color;
+  @include font-params(17px, 16px);
+  text-transform: uppercase;
   font-weight: 700;
 }
 
 .form__item-title {
-	@include font-params(17px, 18px);
+  @include font-params(17px, 18px);
   font-weight: 700;
 }
 
 .form__prompt {
-	@include font-params(14px, 16px);
-	color: $dark-gray;
+  @include font-params(14px, 16px);
+  color: $dark-gray;
 }
 
 .form__field-title {
-	@include font-params(17px, 18px);
+  @include font-params(17px, 18px);
   font-weight: 700;
 }
 
@@ -59,4 +59,3 @@
     outline: none;
   }
 }
-

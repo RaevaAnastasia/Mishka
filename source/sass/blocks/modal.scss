@@ -1,16 +1,16 @@
 .modal {
-	border: 1px solid rgba(198, 198, 198, 1);
-	box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: 1px solid rgba(198, 198, 198, 1);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 }
 
 .modal__title {
-	@include font-params(25px, 30px);
-	text-transform: uppercase;
+  @include font-params(25px, 30px);
+  text-transform: uppercase;
 }
 
 .modal__text {
-	@include font-params(15px, 30px);
-	color: $dark-gray;
+  @include font-params(15px, 30px);
+  color: $dark-gray;
 }
 
 .modal__label {
@@ -20,17 +20,17 @@
   width: 112px;
   height: 52px;
   box-sizing: border-box;
-	@include font-params(17px, 16px);
-	border: 2px solid rgba(68, 68, 68, 0.1);
-	text-align: center;
-	color: $dark-gray;
+  @include font-params(17px, 16px);
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  text-align: center;
+  color: $dark-gray;
 
-	&:hover,
-	&:focus {
-		border-color: rgba(68, 68, 68, 0.3);
-	}
+  &:hover,
+  &:focus {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .modal__radio:checked + .modal__label {
-	border-color: $tiffany-color;
+  border-color: $tiffany-color;
 }

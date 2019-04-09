@@ -1,5 +1,5 @@
 .process {
-	border: 1px solid rgba(236, 236, 236, 1);
+  border: 1px solid rgba(236, 236, 236, 1);
 
   &:hover,
   &:focus {
@@ -12,11 +12,11 @@
 }
 
 .process__title {
-	@include font-params(17px, 24px);
-	color: rgba(0, 0, 0, 1);
+  @include font-params(17px, 24px);
+  color: rgba(0, 0, 0, 1);
 }
 
 .process__description {
-	@include font-params(13px, 24px);
-	color: $dark-gray;
+  @include font-params(13px, 24px);
+  color: $dark-gray;
 }

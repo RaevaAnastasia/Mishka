@@ -1,0 +1,9 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font-params($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}

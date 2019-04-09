@@ -1,0 +1,9 @@
+.features__title {
+  @include font-params(25px, 30px);
+}
+
+.features__item {
+  margin-top: 85px;
+
+  @include font-params(17px, 20px);
+}

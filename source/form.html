@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Вязание на заказ</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="page-header">
-      <a href="index.html" class="page-header__logo logo">
+  <body class="page">
+    <header class="page__header page-header">
+      <a class="page-header__logo logo" href="index.html" >
         <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
       <nav class="main-navigation">
         <ul class="main-navigation__list site-list">
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation__link text text__bold" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+            <a class="main-navigation__link text text__bold" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <a class="main-navigation__link main-navigation__link--search" href="search.html">Поиск по сайту</a>
-        <a class="main-navigation__link main-navigation__link--basket" href="basket.html">Корзина: пока пуста</a>
+        <a class="main-navigation__link main-navigation__link--search text text__bold" href="search.html">Поиск по сайту</a>
+        <a class="main-navigation__link main-navigation__link--basket text text__bold" href="basket.html">Корзина: пока пуста</a>
         <button class="main-navigation__toggle" type="button">Открыть меню</button>
       </nav>
     </header>
@@ -96,7 +97,7 @@
         <button class="form__button button">Отправить заказ</button>
       </form>
     </main>
-    <footer class="page-footer">
+    <footer class="page__footer page-footer">
       <ul class="page-footer__social social site-list">
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com"><span class="visually-hidden">"Мишка" в Инстаграме</span></a>
@@ -108,9 +109,9 @@
           <a class="social__link social__link--tw" href="https://twitter.com"><span class="visually-hidden">"Мишка" в Твиттере</span></a>
         </li>
       </ul>
-      <p class="page-footer__copyright copyright">Разработано
+      <p class="page-footer__copyright copyright text text__bold">Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу интенсива Профессиональный онлайн‑курс HTML и CSS, уровень 2">
-          <img class="copyright__img" src="img/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </p>
     </footer>

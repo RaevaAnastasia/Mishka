@@ -20,6 +20,7 @@
   width: 112px;
   height: 52px;
   box-sizing: border-box;
+
   @include font-params(17px, 16px);
   border: 2px solid rgba(68, 68, 68, 0.1);
   text-align: center;

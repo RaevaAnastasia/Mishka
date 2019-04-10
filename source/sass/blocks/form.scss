@@ -1,0 +1,64 @@
+.form__title {
+  color: $tiffany-color;
+
+  @include font-params(17px, 16px);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.form__item-title {
+  @include font-params(17px, 18px);
+  font-weight: 700;
+}
+
+.form__prompt {
+  @include font-params(14px, 16px);
+  color: $dark-gray;
+}
+
+.form__field-title {
+  @include font-params(17px, 18px);
+  font-weight: 700;
+}
+
+.form__set {
+  border: none;
+}
+
+.form__field {
+  @include font-params(20px, 17px);
+  color: $dark-gray;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  background-color: transparent;
+
+  @include placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $tiffany-color;
+    outline: none;
+  }
+}
+
+.form__textbox-field {
+  min-height: 142px;
+  border: 2px solid $dark-gray;
+  resize: none;
+
+  @include placeholder {
+    font-size: 20px;
+    line-height: 17px;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $tiffany-color;
+    outline: none;
+  }
+}

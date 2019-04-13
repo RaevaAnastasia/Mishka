@@ -1,10 +1,33 @@
-.promo-list__link {
-  display: block;
-  padding: 30px 185px 30px 30px;
+.promo-list {
+  width: 320px;
+  margin: 0 auto;
+}
 
+.promo-list__link {
+  position: relative;
+  display: block;
+  padding: 25px 185px 30px 30px;
+  height: 103px;
+  box-sizing: border-box;
   @include font-params(19px, 24px);
   color: hsl(0, 0%, 100%);
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    height: 108px;
+    padding: 20px 185px 30px 30px;
+  }
+
+  &:hover .promo-list__lamp-icon,
+  &:focus .promo-list__lamp-icon {
+    top: 18px;
+  }
+
+  &:hover .promo-list__toy-icon,
+  &:focus .promo-list__toy-icon {
+    top: 16px;
+  }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
@@ -16,5 +39,57 @@
 
   &--dark-background {
     background-color: hsl(171, 48%, 55%);
+  }
+}
+
+.promo-list__lamp-icon,
+.promo-list__toy-icon {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.promo-list__lamp-icon {
+  top: 23px;
+  right: 36px;
+}
+
+.promo-list__toy-icon {
+  top: 21px;
+  right: 28px;
+}
+
+.promo-list__link:hover .promo-list__lamp-icon,
+.promo-list__link:focus .promo-list__lamp-icon,
+.promo-list__link:hover .promo-list__toy-icon,
+.promo-list__link:focus .promo-list__toy-icon {
+  opacity: 0.7;
+}
+
+.promo-list__link:active .promo-list__lamp-icon,
+.promo-list__link:active .promo-list__toy-icon {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-list {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .promo-list__item {
+    width: 50%;
+  }
+
+  .promo-list__link {
+    @include font-params(20px, 30px);
+    height: 119px;
+    padding: 30px 187px 34px 36px;
+
+    &:hover,
+    &:focus {
+    height: 124px;
+    padding: 25px 187px 34px 36px;
+    }
   }
 }

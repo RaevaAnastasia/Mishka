@@ -1,13 +1,17 @@
 .button {
   display: inline-block;
   vertical-align: top;
-  padding: 20px 85px;
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  box-sizing: border-box;
 
   @include font-params(17px, 24px);
   text-align: center;
   color: $dark-gray;
   font-weight: 700;
   text-decoration: none;
+  text-transform: uppercase;
   border: 2px solid $dark-gray;
   background-color: hsl(0, 0%, 100%);
 

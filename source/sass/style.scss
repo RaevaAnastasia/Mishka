@@ -1,7 +1,7 @@
 @import "fonts.scss";
-@import "common.scss";
 @import "mixin.scss";
 @import "variables.scss";
+@import "scaffolding.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-navigation.scss";
@@ -16,3 +16,5 @@
 @import "blocks/product.scss";
 @import "blocks/button.scss";
 @import "blocks/text.scss";
+@import "blocks/modal.scss";
+@import "blocks/socials.scss";

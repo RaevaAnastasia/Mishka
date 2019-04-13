@@ -1,3 +1,44 @@
 .page-footer {
   background-color: $gray-color;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social {
+  width: 260px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-footer__copyright {
+  width: 260px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 678px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+  .page-footer__social {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    width: auto;
+    margin: 0;
+  }
+
+}

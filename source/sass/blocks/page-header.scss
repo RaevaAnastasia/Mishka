@@ -47,5 +47,13 @@
 @media (min-width: $desktop-width) {
   .page-header__logo {
     order: 1;
+    padding: 9px 171px 7px 35px; /*todo поменять padding-left 101px*/
+  }
+
+  .page-header__description {
+    width: 1150px;
+    margin: 0 auto;
+    @include font-params(53px, 57px);
+    padding: 150px 260px 360px 260px;
   }
 }

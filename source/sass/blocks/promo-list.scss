@@ -93,3 +93,29 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .promo-list {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .promo-list__link {
+    padding-right: 379px;
+
+    &:hover,
+    &:focus {
+      padding-right: 379px;
+    }
+  }
+
+  .promo-list__lamp-icon {
+    padding-top: 10px;
+  }
+
+  .promo-list__toy-icon {
+    padding-top: 12px;
+    padding-right: 5px;
+  }
+}

@@ -196,7 +196,7 @@
   }
 }
 
-@media (max-width: $tablet-width-only) {
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
 .main-navigation__link--small-tablet {
     font-size: 15px;
     margin-bottom: -90px;

@@ -31,10 +31,10 @@
 
 .best-product__table {
   width: 100%;
+
   @include reset;
 
   margin-bottom: 27px;
-
 
   @include font-params(15px, 20px);
   color: $dark-gray;
@@ -49,7 +49,7 @@
   border-bottom: 1px solid $gray-color;
   padding-top: 9px;
   padding-bottom: 9px;
- }
+}
 
 .best-product__price {
   @include reset;

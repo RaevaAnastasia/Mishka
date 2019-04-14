@@ -1,6 +1,26 @@
 .page-title {
-  padding: 76px 40px;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 74px;
 
   @include font-params(27px, 30px);
+  text-align: center;
   background-color: $gray-color;
+  color: rgba(0, 0, 0, 1);
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    @include font-params(43px, 50px);
+    margin: 0 auto;
+    padding-top: 92px;
+    padding-bottom: 76px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    @include font-params(53px, 57px);
+    padding-bottom: 99px;
+  }
 }

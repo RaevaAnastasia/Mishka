@@ -1,4 +1,5 @@
 .product {
+  margin-bottom: 30px;
   border: 1px solid rgba(236, 236, 236, 1);
 
   &:hover,
@@ -11,11 +12,23 @@
   }
 }
 
+.product__img-wrap {
+  @include reset;
+  margin-bottom: 20px;
+}
+
 .product__img {
   width: 100%;
 }
 
+.product__title {
+  @include reset;
+  margin-bottom: 6px;
+}
+
 .product__title-link {
+  display: block;
+
   @include font-params(17px, 24px);
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
@@ -31,9 +44,108 @@
 }
 
 .product__description {
+  @include reset;
+  padding-bottom: 19px;
+
   @include font-params(13px, 30px);
+}
+
+.product__wrapper {
+  display: flex;
+  width: 204px;
+  margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 27px;
+  border-top: 1px solid $gray-color;
 }
 
 .product__price {
   @include font-params(15px, 24px);
+  @include reset;
+}
+
+.product__to-basket {
+  margin-left: auto;
+
+  &:hover path,
+  &:focus path {
+    fill: $tiffany-color;
+  }
+}
+
+.product__basket-img {
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__wrapper-tablet {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .product__img-wrap {
+    width: 334px;
+    height: 334px;
+    margin-bottom: 0;
+  }
+
+  .product__wrapper {
+    width: 268px;
+    margin-top: auto;
+    padding-bottom: 22px;
+  }
+
+  .product__title-link {
+    @include font-params(20px, 24px);
+    padding-top: 30px;
+  }
+
+  .product__description {
+    @include font-params(15px, 30px);
+  }
+
+  .product__price {
+    @include font-params(17px, 24px);
+  }
+
+  .product__wrapper-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .product {
+    display: flex;
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product__wrapper-tablet {
+    flex-grow: 1;
+  }
+
+  .product__wrapper {
+    width: 256px;
+  }
+
+  .product__img-wrap {
+    width: 316px;
+    height: 462px;
+  }
 }

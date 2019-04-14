@@ -9,6 +9,7 @@
   padding: 25px 185px 30px 30px;
   height: 103px;
   box-sizing: border-box;
+
   @include font-params(19px, 24px);
   color: hsl(0, 0%, 100%);
   text-decoration: none;
@@ -88,8 +89,8 @@
 
     &:hover,
     &:focus {
-    height: 124px;
-    padding: 25px 187px 34px 36px;
+      height: 124px;
+      padding: 25px 187px 34px 36px;
     }
   }
 }

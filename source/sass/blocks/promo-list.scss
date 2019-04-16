@@ -1,6 +1,13 @@
+.promo-list {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .promo-list__link {
+  position: relative;
   display: block;
-  padding: 30px 185px 30px 30px;
+  padding: 25px 185px 30px 30px;
+  box-sizing: border-box;
 
   @include font-params(19px, 24px);
   color: hsl(0, 0%, 100%);
@@ -12,9 +19,92 @@
 
   &--light-background {
     background-color: $tiffany-color;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 0 0 $tiffany-color;
+      outline: none;
+    }
   }
 
   &--dark-background {
     background-color: hsl(171, 48%, 55%);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 0 0 hsl(171, 48%, 55%);
+      outline: none;
+    }
+  }
+}
+
+.promo-list__lamp-icon,
+.promo-list__toy-icon {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.promo-list__lamp-icon {
+  top: 23px;
+  right: 36px;
+}
+
+.promo-list__toy-icon {
+  top: 21px;
+  right: 28px;
+}
+
+.promo-list__link:hover .promo-list__lamp-icon,
+.promo-list__link:focus .promo-list__lamp-icon,
+.promo-list__link:hover .promo-list__toy-icon,
+.promo-list__link:focus .promo-list__toy-icon {
+  opacity: 0.7;
+}
+
+.promo-list__link:active .promo-list__lamp-icon,
+.promo-list__link:active .promo-list__toy-icon {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-list {
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .promo-list__item {
+    width: 50%;
+  }
+
+  .promo-list__link {
+    @include font-params(20px, 30px);
+    padding: 30px 187px 34px 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-list {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .promo-list__link {
+    padding-right: 379px;
+
+    &:hover,
+    &:focus {
+      padding-right: 379px;
+    }
+  }
+
+  .promo-list__lamp-icon {
+    padding-top: 10px;
+  }
+
+  .promo-list__toy-icon {
+    padding-top: 12px;
+    padding-right: 5px;
   }
 }

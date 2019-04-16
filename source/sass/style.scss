@@ -1,7 +1,7 @@
 @import "fonts.scss";
-@import "common.scss";
 @import "mixin.scss";
 @import "variables.scss";
+@import "scaffolding.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-navigation.scss";
@@ -16,9 +16,11 @@
 @import "blocks/product.scss";
 @import "blocks/button.scss";
 @import "blocks/text.scss";
+@import "blocks/modal.scss";
+@import "blocks/socials.scss";
+@import "blocks/catalog.scss";
 @import "blocks/reviews.scss";
 @import "blocks/contacts.scss";
-@import "blocks/modal.scss";
 @import "blocks/process.scss";
 @import "blocks/page-description.scss";
 @import "blocks/form.scss";

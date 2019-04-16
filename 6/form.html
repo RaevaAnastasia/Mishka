@@ -44,46 +44,46 @@
       <h1 class="page-title">Вязание на заказ</h1>
       <p class="page-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page-main__form form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__radio-set radio-set">
+        <fieldset class="form__radio-set radio-set form__set">
           <legend class="form__title">Тип</legend>
             <p class="radio-set__item">
-              <input class="visually-hidden" type="radio" name="type" id="accessory" value="accessory" checked>
-              <label class="form__item-title" for="accessory">Аксессуар для интерьера</label>
+              <input class="visually-hidden radio-set__input" type="radio" name="type" id="accessory" value="accessory" checked>
+              <label class="form__item-title radio-set__label" for="accessory">Аксессуар для интерьера</label>
             </p>
             <p class="radio-set__item">
-              <input class="visually-hidden" type="radio" name="type" id="toy" value="toy">
-              <label class="form__item-title" for="toy">Детская игрушка</label>
+              <input class="visually-hidden radio-set__input" type="radio" name="type" id="toy" value="toy">
+              <label class="form__item-title radio-set__label" for="toy">Детская игрушка</label>
             </p>
         </fieldset>
-        <fieldset class="form__checkbox-set checkbox-set">
-          <legend class="form__title set-title">Цвет</legend>
+        <fieldset class="form__checkbox-set checkbox-set form__set">
+          <legend class="form__title">Цвет</legend>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="white" id="white" checked>
-              <label class="form__item-title" for="white">Белый</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="white" id="white" checked>
+              <label class="form__item-title checkbox-set__label" for="white">Белый</label>
             </p>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="gray" id="gray" checked>
-              <label class="form__item-title" for="gray">Серый</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="gray" id="gray" checked>
+              <label class="form__item-title checkbox-set__label" for="gray">Серый</label>
             </p>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-              <label class="form__item-title" for="tiffany">«Тиффани»</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="tiffany" id="tiffany">
+              <label class="form__item-title checkbox-set__label" for="tiffany">«Тиффани»</label>
             </p>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="black" id="black">
-              <label class="form__item-title" for="black">Черный</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="black" id="black">
+              <label class="form__item-title checkbox-set__label" for="black">Черный</label>
             </p>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="pink" id="pink">
-              <label class="form__item-title" for="pink">Розовый</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="pink" id="pink">
+              <label class="form__item-title checkbox-set__label" for="pink">Розовый</label>
             </p>
             <p class="checkbox-set__item">
-              <input class="visually-hidden" type="checkbox" name="orange" id="orange">
-              <label class="form__item-title" for="orange">Оранжевый</label>
+              <input class="visually-hidden checkbox-set__input" type="checkbox" name="orange" id="orange">
+              <label class="form__item-title checkbox-set__label" for="orange">Оранжевый</label>
             </p>
         </fieldset>
-        <fieldset class="form___personal-info">
-          <legend class="form__title set-title">ФИО</legend>
+        <fieldset class="form___personal-info form__set">
+          <legend class="form__title">ФИО</legend>
             <p class="form__field-wrap">
               <label class="form__field-title" for="name">Имя:</label>
               <input class="form__field" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -97,15 +97,15 @@
               <input class="form__field" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </p>
             <p class="form__field-wrap">
-              <label class="form__title set-title" for="tel">тел</label>
+              <label class="form__title" for="tel">тел</label>
               <input class="form__field form__field--tel" type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </p>
             <p class="form__field-wrap">
-              <label class="form__title set-title" for="email">E-mail</label>
+              <label class="form__title" for="email">E-mail</label>
               <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
             </p>
             <p class="form__field-wrap">
-              <label class="form__title set-title" for="wishes">Доп</label>
+              <label class="form__title" for="wishes">Доп</label>
               <textarea class="form__textbox-field" name="wishes" id="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </p>
         </fieldset>

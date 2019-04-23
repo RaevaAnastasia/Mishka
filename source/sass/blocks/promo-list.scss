@@ -1,6 +1,7 @@
 .promo-list {
   width: 320px;
   margin: 0 auto;
+  margin-top: -2px;
 }
 
 .promo-list__link {
@@ -38,31 +39,27 @@
   }
 }
 
-.promo-list__lamp-icon,
-.promo-list__toy-icon {
+.promo-list__icon {
   position: absolute;
   opacity: 0.5;
+
+  &--lamp {
+    top: 23px;
+    right: 36px;
+  }
+
+  &--toy {
+    top: 21px;
+    right: 28px;
+  }
 }
 
-.promo-list__lamp-icon {
-  top: 23px;
-  right: 36px;
-}
-
-.promo-list__toy-icon {
-  top: 21px;
-  right: 28px;
-}
-
-.promo-list__link:hover .promo-list__lamp-icon,
-.promo-list__link:focus .promo-list__lamp-icon,
-.promo-list__link:hover .promo-list__toy-icon,
-.promo-list__link:focus .promo-list__toy-icon {
+.promo-list__link:hover .promo-list__icon,
+.promo-list__link:focus .promo-list__icon {
   opacity: 0.7;
 }
 
-.promo-list__link:active .promo-list__lamp-icon,
-.promo-list__link:active .promo-list__toy-icon {
+.promo-list__link:active .promo-list__icon {
   opacity: 0.3;
 }
 
@@ -74,12 +71,23 @@
   }
 
   .promo-list__item {
-    width: 50%;
+    width: 334px;
   }
 
   .promo-list__link {
     @include font-params(20px, 30px);
     padding: 30px 187px 34px 36px;
+  }
+
+  .promo-list__icon {
+    &--lamp {
+      top: 33px;
+    }
+
+    &--toy {
+      top: 31px;
+      right: 33px;
+    }
   }
 }
 
@@ -88,6 +96,10 @@
     display: flex;
     width: 1050px;
     margin: 0 auto;
+  }
+
+  .promo-list__item {
+    width: 525px;
   }
 
   .promo-list__link {
@@ -99,12 +111,12 @@
     }
   }
 
-  .promo-list__lamp-icon {
-    padding-top: 10px;
+  .promo-list__icon--lamp {
+    padding-top: 0;
   }
 
-  .promo-list__toy-icon {
-    padding-top: 12px;
+  .promo-list__icon--toy {
+    padding-top: 0;
     padding-right: 5px;
   }
 }

@@ -7,8 +7,8 @@
   &::before {
     content: "";
     position: absolute;
-    left: 10px;
-    top: -10px;
+    left: 0;
+    top: -9px;
     width: 36px;
     height: 36px;
     border: 2px solid $dark-gray;
@@ -19,7 +19,8 @@
     display: none;
     content: "";
     position: absolute;
-    left: 22px;
+    top: 3px;
+    left: 12px;
     width: 16px;
     height: 16px;
     background-color: $tiffany-color;
@@ -39,4 +40,32 @@
 
 .radio-set__input:disabled + .radio-set__label::before {
   border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .radio-set__label {
+    padding-left: 80px;
+    margin-left: 10px;
+    margin-bottom: 57px;
+
+    &::before {
+      top: -14px;
+      left: 0;
+      width: 48px;
+      height: 48px;
+    }
+
+    &::after {
+      top: 0;
+      left: 15px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .radio-set__item {
+    margin-bottom: 57px;
+  }
 }

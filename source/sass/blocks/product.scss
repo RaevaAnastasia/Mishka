@@ -93,7 +93,7 @@
 
 @media (min-width: $tablet-width) {
   .product__img-wrap {
-    width: 334px;
+    min-width: 334px;
     height: 334px;
     margin-bottom: 0;
   }
@@ -126,6 +126,7 @@
   .product {
     display: flex;
     margin-bottom: 54px;
+    flex-grow: 0;
   }
 }
 

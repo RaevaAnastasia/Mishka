@@ -16,6 +16,10 @@
   background-repeat: no-repeat;
   background-position: center -18px;
   background-size: 180%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/hero-mobile@2x.jpg");
+  }
 }
 
 .page-header__logo {
@@ -36,7 +40,11 @@
     @include font-params(43px, 50px);
     padding: 150px 135px 371px 135px;
     width: 768px;
-    background-size: cover; /*Фон будет заменен позже*/
+    background-image: url("../../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/hero-tablet@2x.jpg");
+    }
 
     & br {
       display: none;
@@ -56,5 +64,11 @@
 
     @include font-params(53px, 57px);
     padding: 150px 260px 360px 260px;
+
+    background-image: url("../../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/hero-desktop@2x.jpg");
+    }
   }
 }

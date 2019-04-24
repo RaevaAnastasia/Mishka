@@ -5,7 +5,10 @@
     <title>Магазин "Мишка"</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script  src="js/picturefill.js" async></script>
   </head>
   <body class="page">
     <header class="page__header page-header">
@@ -100,7 +103,7 @@
           </picture>
           <div class="best-product__column best-product__column--bottom">
             <p class="best-product__price text text__bold">Цена: 990 руб.</p>
-            <a class="best-product__order-btn button" href="best-product.html">Заказать</a>
+            <a class="best-product__order-btn button modal-up" href="best-product.html">Заказать</a>
           </div>
         </div>
       </article>
@@ -145,7 +148,7 @@
       </section>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
-          <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          <img class="logo__image" src="img/logo-mobile.svg" width="102" height="34" alt="Логотип магазина Мишка">
         </a>
         <ul class="page-footer__social social site-list">
           <li class="social__item">
@@ -191,8 +194,8 @@
         </p>
       </div>
     </footer>
-    <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
+    <section class="modal modal--index">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
         <ul class="modal__list site-list">
@@ -212,6 +215,7 @@
         <button class="modal__button button button--green-theme">Добавить</button>
       </form>
     </section>
+    <div class="modal-overlay"></div>
     <script src="js/script.js"></script>
   </body>
 </html>

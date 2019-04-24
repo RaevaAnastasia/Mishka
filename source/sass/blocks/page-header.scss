@@ -28,8 +28,8 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo {
-    padding: 24px 51px;
-    padding-right: 235px;
+    padding: 22px 209px 0 49px;
+    max-height: 94px;
   }
 
   .page-header__description {
@@ -47,7 +47,7 @@
 @media (min-width: $desktop-width) {
   .page-header__logo {
     order: 1;
-    padding: 9px 171px 7px 35px; /*todo поменять padding-left 101px*/
+    padding: 9px 101px 0 40px;
   }
 
   .page-header__description {

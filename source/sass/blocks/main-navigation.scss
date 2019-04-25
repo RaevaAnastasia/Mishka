@@ -102,17 +102,15 @@
 .main-navigation__link--search:focus .main-navigation__search-icon {
   opacity: 1;
 
-  path {
-    fill: $tiffany-color;
-  }
+  fill: $tiffany-color;
+
 }
 
 .main-navigation__link--search:active .main-navigation__search-icon {
   opacity: 0.3;
 
-  path {
-    fill: $tiffany-color;
-  }
+  fill: $tiffany-color;
+
 }
 
 .main-navigation__link--basket {

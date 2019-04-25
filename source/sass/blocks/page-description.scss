@@ -1,4 +1,28 @@
 .page-description {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+
   @include font-params(13px, 24px);
   color: $dark-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    width: 668px;
+    padding-top: 75px;
+    margin-bottom: 57px;
+
+    @include font-params(17px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    width: 1050px;
+    padding-top: 127px;
+    padding-left: 175px;
+    padding-right: 180px;
+    box-sizing: border-box;
+  }
 }

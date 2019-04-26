@@ -150,7 +150,6 @@
   }
 }
 
-
 .main-navigation--nojs .main-navigation__toggle {
   display: none;
 }
@@ -209,8 +208,11 @@
     box-shadow: none;
     padding: 14px 18px;
   }
-}
 
+  .main-navigation__link--last {
+    padding-right: 50px;
+  }
+}
 
 @media (min-width: $desktop-width) {
   .main-navigation {

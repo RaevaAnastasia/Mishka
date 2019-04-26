@@ -1,19 +1,32 @@
 .best-product {
+  position: relative;
   width: 260px;
   margin: 0 auto;
   padding-top: 28px;
   padding-bottom: 38px;
-  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 6px;
+    bottom: -6px;
+    left: -30px;
+    background-image: url("../img/zigzag-line-mobile.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: 40px;
+  }
 }
 
 .best-product__title {
-  @include reset;
   @include font-params(25px, 30px);
+  margin: 0;
   margin-bottom: 5px;
 }
 
 .best-product__subtitle {
-  @include reset;
+  margin-top: 0;
   margin-bottom: 22px;
 
   @include font-params(17px, 20px);
@@ -22,7 +35,6 @@
 }
 
 .best-product__description {
-  @include reset;
   margin-bottom: 15px;
 
   @include font-params(15px, 24px);
@@ -31,17 +43,10 @@
 
 .best-product__table {
   width: 100%;
-
-  @include reset;
-
   margin-bottom: 27px;
 
   @include font-params(15px, 20px);
   color: $dark-gray;
-}
-
-.best-product__row {
-  @include reset;
 }
 
 .best-product__field,
@@ -52,7 +57,7 @@
 }
 
 .best-product__price {
-  @include reset;
+  margin: 0;
   margin-bottom: 27px;
 
   @include font-params(17px, 24px);
@@ -61,19 +66,33 @@
 }
 
 .best-product__img {
-  @include reset;
   margin-bottom: 17px;
+}
+
+.best-product__field {
+  width: 90px;
 }
 
 @media (min-width: $tablet-width) {
   .best-product {
     width: 668px;
-    padding-top: 46px;
+    padding-top: 43px;
+    padding-bottom: 60px;
+
+    &::after {
+      width: 785px;
+      height: 15px;
+      left: -60px;
+      bottom: 2px;
+      background-image: url("../img/zigzag-line-mobile.svg");
+      background-size: 100%;
+      background-position: 23px;
+    }
   }
 
   .best-product__title {
     @include font-params(43px, 50px);
-    margin-bottom: 51px;
+    margin-bottom: 47px;
   }
 
   .best-product__subtitle {
@@ -100,13 +119,14 @@
     width: 292px;
 
     &--bottom {
-      margin-top: -121px;
+      margin-top: -118px;
     }
   }
 
   .best-product__description {
     @include font-params(17px, 30px);
-    margin-bottom: 31px;
+    margin: 0;
+    margin-bottom: 34px;
   }
 
   .best-product__img {
@@ -124,7 +144,18 @@
   .best-product {
     position: relative;
     width: 1050px;
-    padding-top: 125px;
+    padding-top: 122px;
+    padding-bottom: 100px;
+
+
+    &::after {
+      width: 1050px;
+      height: 23px;
+      left: 0;
+      background-image: url("../img/zigzag-line-mobile.svg");
+      background-position: -27px;
+      background-size: 100%;
+    }
   }
 
   .best-product__title {

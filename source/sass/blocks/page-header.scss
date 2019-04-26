@@ -5,14 +5,16 @@
 
 .page-header__description {
   padding: 70px 35px 123px 35px;
-  width: 320px;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+
 
   @include font-params(27px, 30px);
   text-align: center;
   background-color: hsl(0, 0%, 98%);
-  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -18px;
   background-size: 180%;
@@ -35,11 +37,27 @@
   .page-header__description {
     @include font-params(43px, 50px);
     padding: 150px 135px 371px 135px;
-    width: 768px;
     background-size: cover; /*Фон будет заменен позже*/
 
     & br {
       display: none;
+    }
+  }
+
+  .page-header__promo-wrapper {
+    position: relative;
+    background-color: rgba(250, 250, 250, 1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      bottom: -10px;
+      left: 0;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 100%;
+      background-repeat: repeat-x;
     }
   }
 }
@@ -56,5 +74,14 @@
 
     @include font-params(53px, 57px);
     padding: 150px 260px 360px 260px;
+  }
+
+  .page-header__promo-wrapper {
+    &::after {
+      height: 35px;
+      bottom: -15px;
+      background-position: 0;
+      background-size: 110%;
+    }
   }
 }

@@ -1,0 +1,12 @@
+.page-main__form {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__form {
+    width: auto;
+    margin-bottom: 50px;
+  }
+}

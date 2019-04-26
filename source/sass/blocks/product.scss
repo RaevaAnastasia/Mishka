@@ -18,8 +18,8 @@
 }
 
 .product__img-wrap {
-  @include reset;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 .product__img {
@@ -27,8 +27,8 @@
 }
 
 .product__title {
-  @include reset;
-  margin-bottom: 6px;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .product__title-link {
@@ -49,7 +49,7 @@
 }
 
 .product__description {
-  @include reset;
+  margin: 0;
   padding-bottom: 19px;
 
   @include font-params(13px, 30px);
@@ -65,8 +65,9 @@
 }
 
 .product__price {
+  margin: 0;
+
   @include font-params(15px, 24px);
-  @include reset;
 }
 
 .product__to-basket {

@@ -1,11 +1,7 @@
 .catalog__list {
   width: 260px;
   margin: 0 auto;
-  padding-top: 30px;
-}
-
-.catalog__item {
-  @include reset;
+  padding-top: 7px;
 }
 
 @media (min-width: $tablet-width) {
@@ -21,7 +17,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 1050px;
-    padding-top: 128px;
+    padding-top: 132px;
   }
 
   .catalog__item {

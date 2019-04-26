@@ -10,7 +10,7 @@
     </script>
     <script  src="js/picturefill.js" async></script>
   </head>
-  <body class="page">
+  <body class="page reset">
     <header class="page__header page-header">
       <nav class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
         <a class="page-header__logo logo" href="index.html">
@@ -42,7 +42,7 @@
         </a>
         <a class="main-navigation__link main-navigation__link--desktop  main-navigation__link--small-desktop text text__bold" href="new.html">Новые поступления</a>
         <a class="main-navigation__link main-navigation__link--desktop  main-navigation__link--small-desktop  text text__bold" href="sell.html">Распродажа</a>
-        <a class="main-navigation__link main-navigation__link--tablet  main-navigation__link--small-tablet main-navigation__link--small-desktop" href="delivery.html">Бесплатная доставка по России</a>
+        <a class="main-navigation__link main-navigation__link--tablet  main-navigation__link--small-tablet main-navigation__link--small-desktop main-navigation__link--last" href="delivery.html">Бесплатная доставка по России</a>
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
@@ -51,7 +51,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Виды товаров</h2>
         <ul class="catalog__list site-list">
-          <li class="catalog__item">
+          <li class="catalog__item reset">
             <article class="product">
               <p class="product__img-wrap">
                 <a class="product__link" href="catalog-item.html">
@@ -76,7 +76,7 @@
               </div>
             </article>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item reset">
             <article class="product">
               <p class="product__img-wrap">
                 <a class="product__link" href="catalog-item.html">
@@ -88,7 +88,7 @@
                 </a>
               </p>
               <div class="product__wrapper-layout">
-                <h3 class="product__title"><a class="product__title-link text text__bold" href="catalog-item.html">Корзинка для белья</a></h3>
+                <h3 class="product__title text text__bold"><a class="product__title-link text text__bold" href="catalog-item.html">Корзинка для белья</a></h3>
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
                 <div class="product__wrapper">
                   <p class="product__price text text__bold">690 руб.</p>
@@ -101,7 +101,7 @@
               </div>
             </article>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item reset">
             <article class="product">
               <p class="product__img-wrap">
                 <a class="product__link" href="catalog-item.html">
@@ -113,7 +113,7 @@
                 </a>
               </p>
               <div class="product__wrapper-layout">
-                <h3 class="product__title"><a class="product__title-link text text__bold" href="catalog-item.html">Большая корзинка для&nbsp;игрушек</a></h3>
+                <h3 class="product__title text text__bold"><a class="product__title-link text text__bold" href="catalog-item.html">Большая корзинка для&nbsp;игрушек</a></h3>
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
                 <div class="product__wrapper">
                   <p class="product__price text text__bold">1 500 руб.</p>
@@ -130,11 +130,13 @@
       </section>
       <section class="process">
         <h2 class="process__title">Процесс производства</h2>
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-          <img class="process__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Вязанная голубая корзинка">
-        </picture>
+        <div class="process__video-container">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="process__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Вязанная голубая корзинка">
+          </picture>
+        </div>
         <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="process__to-order button" href="#">Сделать заказ</a>
       </section>

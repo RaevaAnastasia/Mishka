@@ -52,7 +52,7 @@
 .form__field {
   width: 100%;
   padding-top: 7px;
-  padding-bottom: 11px;
+  padding-bottom: 17px;
   padding-right: 40px;
   box-sizing: border-box;
 
@@ -121,7 +121,7 @@
   position: relative;
   margin: 0;
   margin-top: 6px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .form__icon {
@@ -231,7 +231,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 29px;
+    margin-bottom: 25px;
 
     &--last {
       margin-bottom: 44px;
@@ -253,6 +253,11 @@
       box-sizing: border-box;
       margin-left: auto;
     }
+
+    &--email {
+      margin-top: 5px;
+      padding-bottom: 16px;
+    }
   }
 
   .form__icon {
@@ -269,7 +274,7 @@
   }
 
   .form__textbox {
-    padding-top: 46px;
+    padding-top: 43px;
     padding-bottom: 53px;
   }
 
@@ -304,7 +309,7 @@
   }
 
   .form__title {
-    margin-right: 75px;
+    margin-right: 67px;
 
     &--for-field {
       margin-right: 0;
@@ -333,16 +338,20 @@
       width: 700px;
       margin-bottom: 5px;
     }
+
+    &--email {
+      margin-top: -5px;
+    }
   }
 
   .form__icon {
-    top: 0;
-
     &--tel {
+      top: 0;
       right: 73px;
     }
 
     &--email {
+      top: -5px;
       right: 69px;
     }
   }

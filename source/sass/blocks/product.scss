@@ -127,6 +127,7 @@
   .product {
     display: flex;
     margin-bottom: 54px;
+    flex-grow: 0;
   }
 }
 
@@ -143,10 +144,16 @@
 
   .product__wrapper {
     width: 256px;
+    padding-top: 18px;
+    margin-left: 0;
   }
 
   .product__img-wrap {
     width: 316px;
     height: 462px;
+  }
+
+  .product__title-link {
+    padding-top: 27px;
   }
 }

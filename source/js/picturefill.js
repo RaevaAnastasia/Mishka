@@ -11,7 +11,7 @@
   /*jshint eqnull:true */
   var ua = navigator.userAgent;
 
-  if ( window.HTMLPictureElement &amp;&amp; ((/ecko/).test(ua) &amp;&amp; ua.match(/rv\:(\d+)/) &amp;&amp; RegExp.$1 &lt; 45) ) {
+  if ( window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45) ) {
     addEventListener("resize", (function() {
       var timer;
 
@@ -28,7 +28,7 @@
           setTimeout(function() {
             picture.removeChild(source);
           });
-        } else if (!img._pfLastSize || img.offsetWidth &gt; img._pfLastSize) {
+        } else if (!img._pfLastSize || img.offsetWidth > img._pfLastSize) {
           img._pfLastSize = img.offsetWidth;
           sizes = img.sizes;
           img.sizes += ",100vw";
@@ -40,8 +40,8 @@
 
       var findPictureImgs = function() {
         var i;
-        var imgs = document.querySelectorAll("picture &gt; img, img[srcset][sizes]");
-        for (i = 0; i &lt; imgs.length; i++) {
+        var imgs = document.querySelectorAll("picture > img, img[srcset][sizes]");
+        for (i = 0; i < imgs.length; i++) {
           fixRespimg(imgs[i]);
         }
       };
@@ -49,11 +49,11 @@
         clearTimeout(timer);
         timer = setTimeout(findPictureImgs, 99);
       };
-      var mq = window.matchMedia &amp;&amp; matchMedia("(orientation: landscape)");
+      var mq = window.matchMedia && matchMedia("(orientation: landscape)");
       var init = function() {
         onResize();
 
-        if (mq &amp;&amp; mq.addListener) {
+        if (mq && mq.addListener) {
           mq.addListener(onResize);
         }
       };
@@ -104,7 +104,7 @@
   // ua sniffing is done for undetectable img loading features,
   // to do some non crucial perf optimizations
   var ua = navigator.userAgent;
-  var supportAbort = (/rident/).test(ua) || ((/ecko/).test(ua) &amp;&amp; ua.match(/rv\:(\d+)/) &amp;&amp; RegExp.$1 &gt; 35 );
+  var supportAbort = (/rident/).test(ua) || ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 > 35 );
   var curSrcProp = "currentSrc";
   var regWDesc = /\s+\+?\d+(e\d+)?w/;
   var regSize = /(\([^)]+\))?\s*(.+)/;
@@ -203,16 +203,16 @@
 
       return "return " + replace((css || "").toLowerCase(),
         // interpret `and`
-        /\band\b/g, "&amp;&amp;",
+        /\band\b/g, "&&",
 
         // interpret `,`
         /,/g, "||",
 
-        // interpret `min-` as &gt;=
-        /min-([a-z-\s]+):/g, "e.$1&gt;=",
+        // interpret `min-` as >=
+        /min-([a-z-\s]+):/g, "e.$1>=",
 
-        // interpret `max-` as &lt;=
-        /max-([a-z-\s]+):/g, "e.$1&lt;=",
+        // interpret `max-` as <=
+        /max-([a-z-\s]+):/g, "e.$1<=",
 
         //calc value
         /calc([^)]+)/g, "($1)",
@@ -220,7 +220,7 @@
         // interpret css values
         /(\d+[\.]*[\d]*)([a-z]+)/g, "($1 * e.$2)",
         //make eval less evil
-        /^(?!(e.[a-z]|[0-9\.&amp;=|&gt;&lt;\+\-\*\(\)\/])).*/ig, ""
+        /^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, ""
       ) + ";";
     });
 
@@ -228,7 +228,7 @@
       var parsedLength;
       if (!(css in cssCache)) {
         cssCache[css] = false;
-        if (length &amp;&amp; (parsedLength = css.match( regLength ))) {
+        if (length && (parsedLength = css.match( regLength ))) {
           cssCache[css] = parsedLength[ 1 ] * units[parsedLength[ 2 ]];
         } else {
           /*jshint evil:true */
@@ -264,7 +264,7 @@
 
     var options = opt || {};
 
-    if ( options.elements &amp;&amp; options.elements.nodeType === 1 ) {
+    if ( options.elements && options.elements.nodeType === 1 ) {
       if ( options.elements.nodeName.toUpperCase() === "IMG" ) {
         options.elements =  [ options.elements ];
       } else {
@@ -281,7 +281,7 @@
       alreadyRun = true;
 
       // Loop through all elements
-      for ( i = 0; i &lt; plen; i++ ) {
+      for ( i = 0; i < plen; i++ ) {
         pf.fillImg(elements[ i ], options);
       }
 
@@ -294,7 +294,7 @@
    * @param {message}
    * @type {Function}
    */
-  warn = ( window.console &amp;&amp; console.warn ) ?
+  warn = ( window.console && console.warn ) ?
     function( message ) {
       console.warn( message );
     } :
@@ -358,7 +358,7 @@
 
     //experimental
     if (cfg.algorithm === "saveData" ){
-      if ( lowerValue &gt; 2.7 ) {
+      if ( lowerValue > 2.7 ) {
         meanDensity = dprValue + 1;
       } else {
         tooMuch = higherValue - dprValue;
@@ -373,12 +373,12 @@
         meanDensity = lowerValue + bonus;
       }
     } else {
-      meanDensity = (dprValue &gt; 1) ?
+      meanDensity = (dprValue > 1) ?
         Math.sqrt(lowerValue * higherValue) :
         lowerValue;
     }
 
-    return meanDensity &gt; dprValue;
+    return meanDensity > dprValue;
   }
 
   function applyBestCandidate( img ) {
@@ -401,9 +401,9 @@
 
   function setSrcToCur( img, src, set ) {
     var candidate;
-    if ( !set &amp;&amp; src ) {
+    if ( !set && src ) {
       set = img[ pf.ns ].sets;
-      set = set &amp;&amp; set[set.length - 1];
+      set = set && set[set.length - 1];
     }
 
     candidate = getCandidateForSrc(src, set);
@@ -422,10 +422,10 @@
 
   function getCandidateForSrc( src, set ) {
     var i, candidate, candidates;
-    if ( src &amp;&amp; set ) {
+    if ( src && set ) {
       candidates = pf.parseSet( set );
       src = pf.makeUrl(src);
-      for ( i = 0; i &lt; candidates.length; i++ ) {
+      for ( i = 0; i < candidates.length; i++ ) {
         if ( src === pf.makeUrl(candidates[ i ].url) ) {
           candidate = candidates[ i ];
           break;
@@ -443,7 +443,7 @@
     // also note: don't use qsa here, because IE8 sometimes doesn't like source as the key part in a selector
     var sources = picture.getElementsByTagName( "source" );
 
-    for ( i = 0, len = sources.length; i &lt; len; i++ ) {
+    for ( i = 0, len = sources.length; i < len; i++ ) {
       source = sources[ i ];
       source[ pf.ns ] = true;
       srcset = source.getAttribute( "srcset" );
@@ -472,7 +472,7 @@
 
   // 1. Let input be the value passed to this algorithm.
   // (TO-DO : Explain what "set" argument is here. Maybe choose a more
-  // descriptive &amp; more searchable name.  Since passing the "set" in really has
+  // descriptive & more searchable name.  Since passing the "set" in really has
   // nothing to do with parsing proper, I would prefer this assignment eventually
   // go in an external fn.)
   function parseSrcset(input, set) {
@@ -522,7 +522,7 @@
 
       // 13. For each descriptor in descriptors, run the appropriate set of steps
       // from the following list:
-      for (i = 0 ; i &lt; descriptors.length; i++) {
+      for (i = 0 ; i < descriptors.length; i++) {
         desc = descriptors[ i ];
 
         lastChar = desc[ desc.length - 1 ];
@@ -532,7 +532,7 @@
 
         // If the descriptor consists of a valid non-negative integer followed by
         // a U+0077 LATIN SMALL LETTER W character
-        if (regexNonNegativeInteger.test(value) &amp;&amp; (lastChar === "w")) {
+        if (regexNonNegativeInteger.test(value) && (lastChar === "w")) {
 
           // If width and density are not both absent, then let error be yes.
           if (w || d) {pError = true;}
@@ -544,7 +544,7 @@
 
         // If the descriptor consists of a valid floating-point number followed by
         // a U+0078 LATIN SMALL LETTER X character
-        } else if (regexFloatingPoint.test(value) &amp;&amp; (lastChar === "x")) {
+        } else if (regexFloatingPoint.test(value) && (lastChar === "x")) {
 
           // If width, density and future-compat-h are not all absent, then let error
           // be yes.
@@ -553,11 +553,11 @@
           // Apply the rules for parsing floating-point number values to the descriptor.
           // If the result is less than zero, let error be yes. Otherwise, let density
           // be the result.
-          if (floatVal &lt; 0) {pError = true;} else {d = floatVal;}
+          if (floatVal < 0) {pError = true;} else {d = floatVal;}
 
         // If the descriptor consists of a valid non-negative integer followed by
         // a U+0068 LATIN SMALL LETTER H character
-        } else if (regexNonNegativeInteger.test(value) &amp;&amp; (lastChar === "h")) {
+        } else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
 
           // If height and density are not both absent, then let error be yes.
           if (h || d) {pError = true;}
@@ -580,7 +580,7 @@
         if (w) { candidate.w = w;}
         if (d) { candidate.d = d;}
         if (h) { candidate.h = h;}
-        if (!h &amp;&amp; !d &amp;&amp; !w) {candidate.d = 1;}
+        if (!h && !d && !w) {candidate.d = 1;}
         if (candidate.d === 1) {set.has1x = true;}
         candidate.set = set;
 
@@ -722,7 +722,7 @@
       collectCharacters(regexLeadingCommasOrSpaces);
 
       // 5. If position is past the end of input, return candidates and abort these steps.
-      if (pos &gt;= inputLength) {
+      if (pos >= inputLength) {
         return candidates; // (we're done, this is the sole return path)
       }
 
@@ -755,7 +755,7 @@
    *
    * By Alex Bell |  MIT License
    *
-   * Non-strict but accurate and lightweight JS Parser for the string value &lt;img sizes="here"&gt;
+   * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
    *
    * Reference algorithm at:
    * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
@@ -764,15 +764,15 @@
    * (except for comments in parens).
    *
    * Grammar is:
-   * &lt;source-size-list&gt; = &lt;source-size&gt;# [ , &lt;source-size-value&gt; ]? | &lt;source-size-value&gt;
-   * &lt;source-size&gt; = &lt;media-condition&gt; &lt;source-size-value&gt;
-   * &lt;source-size-value&gt; = &lt;length&gt;
+   * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
+   * <source-size> = <media-condition> <source-size-value>
+   * <source-size-value> = <length>
    * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
    *
    * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
    * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
    *
-   * Returns the first valid &lt;css-length&gt; with a media condition that evaluates to true,
+   * Returns the first valid <css-length> with a media condition that evaluates to true,
    * or "100vw" if all valid media conditions evaluate to false.
    *
    */
@@ -785,7 +785,7 @@
     // http://www.w3.org/TR/CSS2/syndata.html#numbers
     // CSS is ASCII case-insensitive:
     // http://www.w3.org/TR/CSS2/syndata.html#characters )
-    // Spec allows exponential notation for &lt;number&gt; type:
+    // Spec allows exponential notation for <number> type:
     // http://dev.w3.org/csswg/css-values/#numbers
     var regexCssLengthWithUnits = /^(?:[+-]?[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?(?:ch|cm|em|ex|in|mm|pc|pt|px|rem|vh|vmin|vmax|vw)$/i;
 
@@ -839,7 +839,7 @@
           pushComponentArray();
           return listArray;
         } else if (inComment) {
-          if ((chrctr === "*") &amp;&amp; (str[pos + 1] === "/")) { // (At end of a comment.)
+          if ((chrctr === "*") && (str[pos + 1] === "/")) { // (At end of a comment.)
             inComment = false;
             pos += 2;
             pushComponent();
@@ -852,7 +852,7 @@
           // (If previous character in loop was also a space, or if
           // at the beginning of the string, do not add space char to
           // component.)
-          if ( (str.charAt(pos - 1) &amp;&amp; isSpace( str.charAt(pos - 1) ) ) || !component ) {
+          if ( (str.charAt(pos - 1) && isSpace( str.charAt(pos - 1) ) ) || !component ) {
             pos += 1;
             continue;
           } else if (parenDepth === 0) {
@@ -872,7 +872,7 @@
           pushComponentArray();
           pos += 1;
           continue;
-        } else if ( (chrctr === "/") &amp;&amp; (str.charAt(pos + 1) === "*") ) {
+        } else if ( (chrctr === "/") && (str.charAt(pos + 1) === "*") ) {
           inComment = true;
           pos += 2;
           continue;
@@ -884,7 +884,7 @@
     }
 
     function isValidNonNegativeSourceSizeValue(s) {
-      if (regexCssLengthWithUnits.test(s) &amp;&amp; (parseFloat(s) &gt;= 0)) {return true;}
+      if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) {return true;}
       if (regexCssCalc.test(s)) {return true;}
       // ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
       // "-0 is equivalent to 0 and is not a negative number." which means that
@@ -903,10 +903,10 @@
     unparsedSizesListLength = unparsedSizesList.length;
 
     // For each unparsed size in unparsed sizes list:
-    for (i = 0; i &lt; unparsedSizesListLength; i++) {
+    for (i = 0; i < unparsedSizesListLength; i++) {
       unparsedSize = unparsedSizesList[i];
 
-      // 1. Remove all consecutive &lt;whitespace-token&gt;s from the end of unparsed size.
+      // 1. Remove all consecutive <whitespace-token>s from the end of unparsed size.
       // ( parseComponentValues() already omits spaces outside of parens. )
 
       // If unparsed size is now empty, that is a parse error; continue to the next
@@ -914,7 +914,7 @@
       // ( parseComponentValues() won't push an empty array. )
 
       // 2. If the last component value in unparsed size is a valid non-negative
-      // &lt;source-size-value&gt;, let size be its value and remove the component value
+      // <source-size-value>, let size be its value and remove the component value
       // from unparsed size. Any CSS function other than the calc() function is
       // invalid. Otherwise, there is a parse error; continue to the next iteration
       // of this algorithm.
@@ -928,7 +928,7 @@
         continue;
       }
 
-      // 3. Remove all consecutive &lt;whitespace-token&gt;s from the end of unparsed
+      // 3. Remove all consecutive <whitespace-token>s from the end of unparsed
       // size. If unparsed size is now empty, return size and exit this algorithm.
       // If this was not the last item in unparsed sizes list, that is a parse error.
       if (unparsedSize.length === 0) {
@@ -936,8 +936,8 @@
       }
 
       // 4. Parse the remaining component values in unparsed size as a
-      // &lt;media-condition&gt;. If it does not parse correctly, or it does parse
-      // correctly but the &lt;media-condition&gt; evaluates to false, continue to the
+      // <media-condition>. If it does not parse correctly, or it does parse
+      // correctly but the <media-condition> evaluates to false, continue to the
       // next iteration of this algorithm.
       // (Parsing all possible compound media conditions in JS is heavy, complicated,
       // and the payoff is unclear. Is there ever an situation where the
@@ -967,17 +967,17 @@
 
   // UC browser does claim to support srcset and picture, but not sizes,
   // this extended test reveals the browser does support nothing
-  if (pf.supSrcset &amp;&amp; pf.supPicture &amp;&amp; !pf.supSizes) {
+  if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
     (function(image2) {
       image.srcset = "data:,a";
       image2.src = "data:,a";
       pf.supSrcset = image.complete === image2.complete;
-      pf.supPicture = pf.supSrcset &amp;&amp; pf.supPicture;
+      pf.supPicture = pf.supSrcset && pf.supPicture;
     })(document.createElement("img"));
   }
 
   // Safari9 has basic support for sizes, but does't expose the `sizes` idl attribute
-  if (pf.supSrcset &amp;&amp; !pf.supSizes) {
+  if (pf.supSrcset && !pf.supSizes) {
 
     (function() {
       var width2 = "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
@@ -990,7 +990,7 @@
           pf.supSizes = true;
         }
 
-        alwaysCheckWDescriptor = pf.supSrcset &amp;&amp; !pf.supSizes;
+        alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
 
         isSupportTestReady = true;
         // force async
@@ -1011,7 +1011,7 @@
 
   // using pf.qsa instead of dom traversing does scale much better,
   // especially on sites mixing responsive and non-responsive images
-  pf.selShort = "picture&gt;img,img[srcset]";
+  pf.selShort = "picture>img,img[srcset]";
   pf.sel = pf.selShort;
   pf.cfg = cfg;
 
@@ -1054,7 +1054,7 @@
    * @returns {boolean}
    */
   pf.matchesMedia = function() {
-    if ( window.matchMedia &amp;&amp; (matchMedia( "(min-width: 0.1em)" ) || {}).matches ) {
+    if ( window.matchMedia && (matchMedia( "(min-width: 0.1em)" ) || {}).matches ) {
       pf.matchesMedia = function( media ) {
         return !media || ( matchMedia( media ).matches );
       };
@@ -1087,7 +1087,7 @@
   pf.calcLength = function( sourceSizeValue ) {
 
     var value = evalCSS(sourceSizeValue, true) || false;
-    if (value &lt; 0) {
+    if (value < 0) {
       value = false;
     }
 
@@ -1110,8 +1110,8 @@
   pf.parseSize = memoize(function( sourceSizeStr ) {
     var match = ( sourceSizeStr || "" ).match(regSize);
     return {
-      media: match &amp;&amp; match[1],
-      length: match &amp;&amp; match[2]
+      media: match && match[1],
+      length: match && match[2]
     };
   });
 
@@ -1129,7 +1129,7 @@
    */
   pf.getEmValue = function() {
     var body;
-    if ( !eminpx &amp;&amp; (body = document.body) ) {
+    if ( !eminpx && (body = document.body) ) {
       var div = document.createElement( "div" ),
         originalHTMLCSS = docElem.style.cssText,
         originalBodyCSS = body.style.cssText;
@@ -1188,7 +1188,7 @@
 
       candidates = pf.parseSet( set );
 
-      for ( var i = 0, len = candidates.length; i &lt; len; i++ ) {
+      for ( var i = 0, len = candidates.length; i < len; i++ ) {
         setResolution( candidates[ i ], set.sizes );
       }
     }
@@ -1217,18 +1217,18 @@
     curCan = imageData.curCan || setSrcToCur(img, curSrc, candidates[0].set);
 
     // if we have a current source, we might either become lazy or give this source some advantage
-    if ( curCan &amp;&amp; curCan.set === candidates[ 0 ].set ) {
+    if ( curCan && curCan.set === candidates[ 0 ].set ) {
 
       // if browser can abort image request and the image has a higher pixel density than needed
       // and this image isn't downloaded yet, we skip next part and try to save bandwidth
-      abortCurSrc = (supportAbort &amp;&amp; !img.complete &amp;&amp; curCan.res - 0.1 &gt; dpr);
+      abortCurSrc = (supportAbort && !img.complete && curCan.res - 0.1 > dpr);
 
       if ( !abortCurSrc ) {
         curCan.cached = true;
 
         // if current candidate is "best", "better" or "okay",
         // set it to bestCandidate
-        if ( curCan.res &gt;= dpr ) {
+        if ( curCan.res >= dpr ) {
           bestCandidate = curCan;
         }
       }
@@ -1241,15 +1241,15 @@
       length = candidates.length;
       bestCandidate = candidates[ length - 1 ];
 
-      for ( i = 0; i &lt; length; i++ ) {
+      for ( i = 0; i < length; i++ ) {
         candidate = candidates[ i ];
-        if ( candidate.res &gt;= dpr ) {
+        if ( candidate.res >= dpr ) {
           j = i - 1;
 
           // we have found the perfect candidate,
           // but let's improve this a little bit with some assumptions ;-)
-          if (candidates[ j ] &amp;&amp;
-            (abortCurSrc || curSrc !== pf.makeUrl( candidate.url )) &amp;&amp;
+          if (candidates[ j ] &&
+            (abortCurSrc || curSrc !== pf.makeUrl( candidate.url )) &&
             chooseLowRes(candidates[ j ].res, candidate.res, dpr, candidates[ j ].cached)) {
 
             bestCandidate = candidates[ j ];
@@ -1298,7 +1298,7 @@
     var match = false;
     var sets = img [ pf.ns ].sets;
 
-    for ( i = 0; i &lt; sets.length &amp;&amp; !match; i++ ) {
+    for ( i = 0; i < sets.length && !match; i++ ) {
       set = sets[i];
 
       if ( !set.srcset || !pf.matchesMedia( set.media ) || !(supportsType = pf.supportsType( set.type )) ) {
@@ -1319,7 +1319,7 @@
   pf.parseSets = function( element, parent, options ) {
     var srcsetAttribute, imageSet, isWDescripor, srcsetParsed;
 
-    var hasPicture = parent &amp;&amp; parent.nodeName.toUpperCase() === "PICTURE";
+    var hasPicture = parent && parent.nodeName.toUpperCase() === "PICTURE";
     var imageData = element[ pf.ns ];
 
     if ( imageData.src === undefined || options.src ) {
@@ -1352,10 +1352,10 @@
 
       imageData.sets.push( imageSet );
 
-      isWDescripor = (alwaysCheckWDescriptor || imageData.src) &amp;&amp; regWDesc.test(imageData.srcset || "");
+      isWDescripor = (alwaysCheckWDescriptor || imageData.src) && regWDesc.test(imageData.srcset || "");
 
       // add normal src as candidate, if source has no w descriptor
-      if ( !isWDescripor &amp;&amp; imageData.src &amp;&amp; !getCandidateForSrc(imageData.src, imageSet) &amp;&amp; !imageSet.has1x ) {
+      if ( !isWDescripor && imageData.src && !getCandidateForSrc(imageData.src, imageSet) && !imageSet.has1x ) {
         imageSet.srcset += ", " + imageData.src;
         imageSet.cands.push({
           url: imageData.src,
@@ -1376,9 +1376,9 @@
 
     // if img has picture or the srcset was removed or has a srcset and does not support srcset at all
     // or has a w descriptor (and does not support sizes) set support to false to evaluate
-    imageData.supported = !( hasPicture || ( imageSet &amp;&amp; !pf.supSrcset ) || (isWDescripor &amp;&amp; !pf.supSizes) );
+    imageData.supported = !( hasPicture || ( imageSet && !pf.supSrcset ) || (isWDescripor && !pf.supSizes) );
 
-    if ( srcsetParsed &amp;&amp; pf.supSrcset &amp;&amp; !imageData.supported ) {
+    if ( srcsetParsed && pf.supSrcset && !imageData.supported ) {
       if ( srcsetAttribute ) {
         setImgAttr.call( element, srcsetAttr, srcsetAttribute );
         element.srcset = "";
@@ -1387,7 +1387,7 @@
       }
     }
 
-    if (imageData.supported &amp;&amp; !imageData.srcset &amp;&amp; ((!imageData.src &amp;&amp; element.src) ||  element.src !== pf.makeUrl(imageData.src))) {
+    if (imageData.supported && !imageData.srcset && ((!imageData.src && element.src) ||  element.src !== pf.makeUrl(imageData.src))) {
       if (imageData.src === null) {
         element.removeAttribute("src");
       } else {
@@ -1412,7 +1412,7 @@
     // if the element has already been evaluated, skip it
     // unless `options.reevaluate` is set to true ( this, for example,
     // is set to true when running `picturefill` on `resize` ).
-    if ( !extreme &amp;&amp; imageData.evaled === evalId ) {
+    if ( !extreme && imageData.evaled === evalId ) {
       return;
     }
 
@@ -1439,7 +1439,7 @@
     pf.fillImg = noop;
   } else {
 
-      // Set up picture polyfill by polling the document
+     // Set up picture polyfill by polling the document
     (function() {
       var isDomReady;
       var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
@@ -1467,7 +1467,7 @@
         var later = function() {
           var last = (new Date()) - timestamp;
 
-          if (last &lt; wait) {
+          if (last < wait) {
             timeout = setTimeout(later, wait - last);
           } else {
             timeout = null;
@@ -1520,7 +1520,7 @@
     }
   };
 
-  while (setOptions &amp;&amp; setOptions.length) {
+  while (setOptions && setOptions.length) {
     window.picturefillCFG.push(setOptions.shift());
   }
 
@@ -1528,10 +1528,10 @@
   window.picturefill = picturefill;
 
   /* expose picturefill */
-  if ( typeof module === "object" &amp;&amp; typeof module.exports === "object" ) {
+  if ( typeof module === "object" && typeof module.exports === "object" ) {
     // CommonJS, just export
     module.exports = picturefill;
-  } else if ( typeof define === "function" &amp;&amp; define.amd ) {
+  } else if ( typeof define === "function" && define.amd ) {
     // AMD support
     define( "picturefill", function() { return picturefill; } );
   }

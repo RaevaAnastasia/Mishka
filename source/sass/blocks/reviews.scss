@@ -67,6 +67,14 @@
   }
 }
 
+.reviews__arrow:focus .reviews__arrow-img {
+  opacity: 0.6;
+}
+
+.reviews__arrow:active .reviews__arrow-img {
+  opacity: 0.3;
+}
+
 .reviews__arrow-wrapper {
   display: flex;
   margin-bottom: 36px;

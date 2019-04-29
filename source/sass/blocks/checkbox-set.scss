@@ -42,6 +42,10 @@
   display: block;
 }
 
+.checkbox-set__input:focus + .checkbox-set__label::before {
+  border: 2px solid $tiffany-color;
+}
+
 .checkbox-set__label:hover::before,
 .checkbox-set__label:focus::before {
   border: 2px solid $tiffany-color;

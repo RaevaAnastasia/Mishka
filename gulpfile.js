@@ -15,12 +15,14 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del  = require("del");
+var csscomb = require("gulp-csscomb");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(csscomb())
     .pipe(postcss([
       autoprefixer()
     ]))

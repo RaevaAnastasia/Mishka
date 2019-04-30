@@ -102,17 +102,13 @@
 .main-navigation__link--search:focus .main-navigation__search-icon {
   opacity: 1;
 
-  path {
-    fill: $tiffany-color;
-  }
+  fill: $tiffany-color;
 }
 
 .main-navigation__link--search:active .main-navigation__search-icon {
   opacity: 0.3;
 
-  path {
-    fill: $tiffany-color;
-  }
+  fill: $tiffany-color;
 }
 
 .main-navigation__link--basket {
@@ -178,13 +174,17 @@
   .main-navigation__link--search {
     font-size: 0;
     width: 82px;
-    padding: 32px;
-    padding-top: 36px;
+    padding: 25px;
+    padding-top: 20px;
     box-sizing: border-box;
   }
 
+  .main-navigation__search-icon {
+    top: 36px;
+  }
+
   .main-navigation__link--basket {
-    padding: 32px 50px 36px 82px;
+    padding: 32px 50px 34px 82px;
   }
 
   .main-navigation__link--tablet {
@@ -236,7 +236,12 @@
 
   .main-navigation__link--basket {
     order: 3;
-    padding: 30px 52px 35px 83px;
+    padding: 30px 52px 33px 85px;
+  }
+
+  .main-navigation__basket-icon {
+    top: 36px;
+    left: 34px;
   }
 
   .main-navigation__link--desktop {

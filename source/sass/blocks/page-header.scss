@@ -23,7 +23,7 @@
   background-size: 180%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/hero-mobile@2x.jpg");
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
 }
 
@@ -37,20 +37,20 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo {
-    padding: 24px 51px;
-    padding-right: 235px;
+    padding: 22px 209px 0 49px;
+    max-height: 94px;
   }
 
   .page-header__description {
     @include font-params(43px, 50px);
     padding: 150px 135px 371px 135px;
     width: 768px;
-    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center -5px;
     background-size: 150%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/hero-tablet@2x.jpg");
+      background-image: url("../img/hero-tablet@2x.jpg");
     }
 
     & br {
@@ -79,7 +79,7 @@
 @media (min-width: $desktop-width) {
   .page-header__logo {
     order: 1;
-    padding: 9px 171px 7px 35px; /*todo поменять padding-left 101px*/
+    padding: 9px 101px 0 40px;
   }
 
   .page-header__description {
@@ -89,11 +89,11 @@
     @include font-params(53px, 57px);
     padding: 150px 260px 360px 260px;
 
-    background-image: url("../../img/hero-desktop@1x.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/hero-desktop@2x.jpg");
+      background-image: url("../img/hero-desktop@2x.jpg");
     }
   }
 
@@ -101,7 +101,6 @@
     &::after {
       height: 35px;
       bottom: -15px;
-      background-position: 0;
       background-size: 110%;
     }
   }

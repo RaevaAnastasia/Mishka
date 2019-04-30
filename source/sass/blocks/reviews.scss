@@ -67,6 +67,14 @@
   }
 }
 
+.reviews__arrow:focus .reviews__arrow-img {
+  opacity: 0.6;
+}
+
+.reviews__arrow:active .reviews__arrow-img {
+  opacity: 0.3;
+}
+
 .reviews__arrow-wrapper {
   display: flex;
   margin-bottom: 36px;
@@ -106,8 +114,8 @@
       bottom: -19px;
       left: 0;
       background-image: url("../img/zigzag-line-mobile.svg");
-      background-position: center;
-      background-size: 100%;
+      background-position: 15px 0;
+      background-size: 101%;
     }
   }
 

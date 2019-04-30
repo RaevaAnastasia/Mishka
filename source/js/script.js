@@ -16,27 +16,29 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-for (var i = 0; i < modalUp.length; i++) {
-  modalUp[i].addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modal.classList.add("modal--show");
-    modalOverlay.classList.add("modal-overlay--show");
-  });
-}
+if (modal) {
+  for (var i = 0; i < modalUp.length; i++) {
+    modalUp[i].addEventListener("click", function(evt) {
+      evt.preventDefault();
+      modal.classList.add("modal--show");
+      modalOverlay.classList.add("modal-overlay--show");
+    });
+  }
 
-modalOverlay.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modal.classList.remove("modal--show");
-    modalOverlay.classList.remove("modal-overlay--show");
-});
-
-window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (modal.classList.contains("modal--show")) {
+  modalOverlay.addEventListener("click", function(evt) {
       evt.preventDefault();
       modal.classList.remove("modal--show");
       modalOverlay.classList.remove("modal-overlay--show");
+  });
+
+  window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modal.classList.contains("modal--show")) {
+        evt.preventDefault();
+        modal.classList.remove("modal--show");
+        modalOverlay.classList.remove("modal-overlay--show");
+      }
     }
-  }
-});
+  });
+}

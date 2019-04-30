@@ -10,12 +10,12 @@
   margin-top: -5px;
 }
 
-.social__img:hover,
-.social__img:focus {
+.social__link:hover .social__img,
+.social__link:focus .social__img {
   fill: rgba(70, 193, 174, 1);
 }
 
-.social__img:active {
+.social__link:active .social__img {
   fill: rgba(70, 193, 174, 0.3);
 }
 

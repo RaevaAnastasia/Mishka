@@ -130,3 +130,9 @@
     width: 350px;
   }
 }
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal {
+    top: 20px;
+  }
+}

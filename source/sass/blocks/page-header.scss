@@ -52,10 +52,6 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
     }
-
-    & br {
-      display: none;
-    }
   }
 
   .page-header__promo-wrapper {

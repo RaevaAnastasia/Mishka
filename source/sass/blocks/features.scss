@@ -12,6 +12,7 @@
 .features__item {
   position: relative;
   padding-top: 84px;
+  word-wrap: break-word;
 
   @include font-params(17px, 20px);
 

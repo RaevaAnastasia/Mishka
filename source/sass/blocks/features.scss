@@ -79,6 +79,7 @@
     padding-top: 45px;
     padding-right: 10px;
     margin-bottom: 86px;
+    flex-grow: 0;
   }
 
   .features__title {
@@ -86,10 +87,11 @@
   }
 
   .features__list {
-    max-height: 480px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    box-sizing: border-box;
   }
 
   .features__item {

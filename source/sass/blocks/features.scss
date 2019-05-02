@@ -73,6 +73,8 @@
 
 @media (min-width: $tablet-width) {
   .features {
+    display: flex;
+    flex-direction: column;
     width: 668px;
     padding-top: 45px;
     padding-right: 10px;

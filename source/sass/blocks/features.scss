@@ -26,8 +26,8 @@
   &--eco::before {
     top: 31px;
     left: 10px;
-    min-width: 32px;
-    min-height: 37px;
+    min-width: 33px;
+    min-height: 38px;
     background-image: url("../img/icon-feature-flower.svg");
   }
 
@@ -77,9 +77,9 @@
     display: flex;
     flex-direction: column;
     width: 668px;
-    padding-top: 45px;
+    padding-top: 43px;
     padding-right: 10px;
-    margin-bottom: 86px;
+    margin-bottom: 40px;
     flex-grow: 0;
   }
 
@@ -88,40 +88,44 @@
   }
 
   .features__list {
-    height: 460px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top: 33px;
+    padding-left: 5px;
     box-sizing: border-box;
   }
 
   .features__item {
     @include font-params(20px, 22px);
     width: 300px;
-    padding-top: 108px;
+    padding-top: 70px;
+    margin-bottom: 40px;
 
     &--eco::before {
-      top: 47px;
+      top: 16px;
     }
 
     &--scandy::before {
-      top: 51px;
+      top: 17px;
     }
 
     &--likes::before {
-      top: 60px;
+      top: 24px;
     }
 
     &--handmade::before {
-      top: 52px;
+      top: 17px;
     }
 
     &--motherland::before {
-      top: 52px;
+      top: 20px;
     }
 
     &--pack::before {
-      top: 57px;
+      top: 19px;
     }
   }
 }
@@ -131,17 +135,43 @@
     width: 1050px;
     margin: 0 auto;
     margin-bottom: 89px;
-    padding-top: 59px;
-    padding-left: 172px;
+    padding-top: 55px;
+    padding-left: 170px;
     padding-right: 170px;
     box-sizing: border-box;
+    margin-bottom: 25px;
   }
 
   .features__title {
     @include font-params(53px, 57px);
   }
 
+  .features__list {
+    height: 520px;
+  }
+
   .features__item {
-    padding-top: 108px;
+    margin-bottom: 45px;
+    padding-top: 67px;
+
+    &--eco::before {
+      top: 14px;
+    }
+
+    &--scandy::before {
+      top: 14px;
+    }
+
+    &--likes::before {
+      top: 18px;
+    }
+
+    &--motherland::before {
+      top: 18px;
+    }
+
+    &--pack::before {
+      top: 14px;
+    }
   }
 }

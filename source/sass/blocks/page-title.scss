@@ -1,8 +1,8 @@
 .page-title {
   margin: 0;
   margin-bottom: 23px;
-  padding-top: 70px;
-  padding-bottom: 74px;
+  padding-top: 69px;
+  padding-bottom: 76px;
 
   @include font-params(27px, 30px);
   text-align: center;
@@ -17,7 +17,7 @@
 
     @include font-params(43px, 50px);
     margin: 0 auto;
-    padding-top: 92px;
+    padding-top: 95px;
     padding-bottom: 76px;
 
     &::after {

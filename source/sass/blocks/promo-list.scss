@@ -7,7 +7,7 @@
 .promo-list__link {
   position: relative;
   display: block;
-  padding: 25px 185px 30px 30px;
+  padding: 25px 185px 30px 28px;
   box-sizing: border-box;
 
   @include font-params(19px, 24px);
@@ -73,6 +73,7 @@
   }
 
   .promo-list__item {
+    display: flex;
     width: 334px;
   }
 
@@ -106,6 +107,7 @@
 
   .promo-list__link {
     padding-right: 379px;
+    padding-top: 28px;
 
     &:hover,
     &:focus {
@@ -114,7 +116,7 @@
   }
 
   .promo-list__icon--lamp {
-    padding-top: 0;
+    top: 30px;
   }
 
   .promo-list__icon--toy {

@@ -180,11 +180,17 @@
   }
 
   .main-navigation__search-icon {
-    top: 36px;
+    top: 37px;
+    left: 33px;
   }
 
   .main-navigation__link--basket {
-    padding: 32px 50px 34px 82px;
+    padding: 32px 47px 34px 86px;
+  }
+
+  .main-navigation__basket-icon {
+    top: 36px;
+    left: 33px;
   }
 
   .main-navigation__link--tablet {
@@ -204,7 +210,7 @@
     font-size: 15px;
     margin-bottom: -90px;
     box-shadow: none;
-    padding: 14px 18px;
+    padding: 16px 19px;
   }
 
   .main-navigation__link--last {
@@ -223,7 +229,7 @@
   }
 
   .main-navigation__link {
-    padding: 30px 35px 35px;
+    padding: 31px 35px 32px 35px;
   }
 
   .main-navigation__item:first-child {
@@ -253,7 +259,7 @@
     font-size: 15px;
     margin-bottom: -90px;
     box-shadow: none;
-    padding: 16px 12px 16px 50px;
+    padding: 19px 12px 16px 50px;
 
     &:last-of-type {
       margin-right: 40px;

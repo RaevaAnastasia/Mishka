@@ -17,7 +17,7 @@
 
     @include font-params(43px, 50px);
     margin: 0 auto;
-    padding-top: 95px;
+    padding-top: 94px;
     padding-bottom: 76px;
 
     &::after {
@@ -28,8 +28,8 @@
       bottom: -15px;
       left: 0;
       background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
+      background-size: 768px 23px;
+      background-repeat: repeat-x;
     }
   }
 }
@@ -42,10 +42,7 @@
     &::after {
       height: 34px;
       bottom: -20px;
-      left: 0;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: 100%;
-      background-repeat: repeat-x;
+      background-size: 1150px 34px;
     }
   }
 }

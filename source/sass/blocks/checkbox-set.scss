@@ -27,12 +27,12 @@
     display: none;
     content: "";
     position: absolute;
-    top: -8px;
-    left: 11px;
-    width: 10px;
+    top: -7px;
+    left: 13px;
+    width: 6px;
     height: 17px;
     border: 3px solid rgba(0, 0, 0, 1);
-    transform: rotate(42deg);
+    transform: rotate(47deg);
     border-left-color: transparent;
     border-top-color: transparent;
   }
@@ -57,8 +57,8 @@
 
 @media (min-width: $tablet-width) {
   .checkbox-set {
-    padding-top: 45px;
-    padding-bottom: 30px;
+    padding-top: 47px;
+    padding-bottom: 28px;
     background-color: $gray-color;
   }
 

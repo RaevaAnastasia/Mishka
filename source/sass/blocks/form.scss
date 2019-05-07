@@ -22,6 +22,10 @@
   &--for-field {
     margin-top: 34px;
   }
+
+  &--email::after {
+    width: 179px;
+  }
 }
 
 .form__item-title {
@@ -52,7 +56,7 @@
 .form__field {
   width: 100%;
   padding-top: 7px;
-  padding-bottom: 17px;
+  padding-bottom: 11px;
   padding-right: 40px;
   box-sizing: border-box;
 
@@ -152,7 +156,12 @@
 }
 
 .form___personal-info {
-  margin-bottom: 4px;
+  margin-bottom: 7px;
+}
+
+.form__button {
+  padding-top: 15px;
+  padding-bottom: 14px;
 }
 
 
@@ -169,7 +178,7 @@
   }
 
   .form__radio-set {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .form__title {
@@ -208,12 +217,12 @@
   }
 
   .form___personal-info {
-    padding-top: 45px;
+    padding-top: 47px;
   }
 
   .form__personal-contacts {
-    padding-top: 55px;
-    padding-bottom: 10px;
+    padding-top: 53px;
+    padding-bottom: 5px;
     background-color: $gray-color;
   }
 
@@ -229,7 +238,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 29px;
 
     &--last {
       margin-bottom: 44px;
@@ -250,11 +259,7 @@
       width: 500px;
       box-sizing: border-box;
       margin-left: auto;
-    }
-
-    &--email {
-      margin-top: 5px;
-      padding-bottom: 16px;
+      padding-bottom: 12px;
     }
   }
 
@@ -272,7 +277,7 @@
   }
 
   .form__textbox {
-    padding-top: 43px;
+    padding-top: 48px;
     padding-bottom: 53px;
   }
 
@@ -302,54 +307,60 @@
     width: 1050px;
     margin: 0 auto;
     padding-right: 110px;
-    padding-left: 60px;
+    padding-left: 62px;
     box-sizing: border-box;
   }
 
   .form__title {
-    margin-right: 67px;
+    margin-right: 70px;
 
     &--for-field {
       margin-right: 0;
     }
+
+    &--tel {
+      margin-top: 14px;
+    }
   }
 
   .form__field-wrap {
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 
   .form___personal-info {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     margin-bottom: 0;
   }
 
   .form__personal-contacts {
-    padding-top: 55px;
-    padding-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 24px;
   }
 
   .form__field {
     margin-right: 65px;
+    padding-bottom: 13px;
+    padding-top: 6px;
 
     &--tel,
     &--email {
       width: 700px;
-      margin-bottom: 5px;
+      margin-top: 0;
     }
 
     &--email {
-      margin-top: -5px;
+      padding-top: 0;
     }
   }
 
   .form__icon {
     &--tel {
-      top: 0;
+      top: 7px;
       right: 73px;
     }
 
     &--email {
-      top: -5px;
+      top: 0;
       right: 69px;
     }
   }

@@ -80,4 +80,17 @@
     margin-left: 8px;
     margin-bottom: 57px;
   }
+
+  .radio-set__label {
+
+    &::before {
+      top: -15px;
+      left: -2px;
+    }
+
+    &::after {
+      top: -1px;
+      left: 13px;
+    }
+  }
 }

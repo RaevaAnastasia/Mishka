@@ -95,6 +95,10 @@
   }
 }
 
+.form__field:required:invalid:not(:empty) {
+  border-bottom: 2px solid rgba(210, 40, 86, 1);
+}
+
 .form__textbox-field {
   width: 100%;
   min-height: 142px;

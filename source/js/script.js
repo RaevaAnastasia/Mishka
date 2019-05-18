@@ -5,6 +5,8 @@ var modal = document.querySelector(".modal");
 var modalOverlay = document.querySelector(".modal-overlay");
 
 mainNavigation.classList.remove("main-navigation--nojs");
+mainNavigation.classList.remove("main-navigation--opened");
+mainNavigation.classList.add("main-navigation--closed");
 
 navToggle.addEventListener("click", function() {
   if (mainNavigation.classList.contains("main-navigation--closed")) {

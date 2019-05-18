@@ -7,7 +7,7 @@
 .contacts__title {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 
   @include font-params(18px, 30px);
 }
@@ -98,14 +98,14 @@
 
   .contacts__title {
     position: relative;
-    width: 668px;
+    width: 675px;
     margin-bottom: 38px;
 
     @include font-params(43px, 50px);
 
     &::after {
       position: absolute;
-      right: 3px;
+      right: 7px;
       top: -15px;
       content: "";
       width: 47px;

@@ -2,7 +2,7 @@
   width: 260px;
   margin: 0 auto;
   margin-bottom: 58px;
-  padding-top: 20px;
+  padding-top: 22px;
   border: 1px solid rgba(236, 236, 236, 1);
 
   &:hover,
@@ -18,7 +18,7 @@
 .process__title {
   position: relative;
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   padding-left: 90px;
 
   @include font-params(17px, 24px);
@@ -39,7 +39,7 @@
 
 .process__description {
   margin: 0 34px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
 
   @include font-params(13px, 24px);
@@ -48,7 +48,7 @@
 
 .process__video-container {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   &::before {
     content: "";

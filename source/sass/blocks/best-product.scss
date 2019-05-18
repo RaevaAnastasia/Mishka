@@ -10,7 +10,7 @@
     content: "";
     width: 320px;
     height: 6px;
-    bottom: -6px;
+    bottom: -3px;
     left: -30px;
     background-image: url("../img/zigzag-line-mobile.svg");
     background-size: 320px 19px;
@@ -36,7 +36,7 @@
 }
 
 .best-product__description {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @include font-params(15px, 24px);
   color: $dark-gray;
@@ -45,6 +45,7 @@
 .best-product__table {
   width: 100%;
   margin-bottom: 27px;
+  margin-left: -2px;
 
   @include font-params(15px, 20px);
   color: $dark-gray;
@@ -53,13 +54,13 @@
 .best-product__field,
 .best-product__value {
   border-bottom: 1px solid $gray-color;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-bottom: 9px;
 }
 
 .best-product__price {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   @include font-params(17px, 24px);
   color: $dark-gray;
@@ -67,11 +68,15 @@
 }
 
 .best-product__img {
-  margin-bottom: 17px;
+  margin-bottom: 20px;
 }
 
 .best-product__field {
-  width: 90px;
+  width: 92px;
+}
+
+.best-product__order-btn {
+  padding-top: 12px;
 }
 
 @media (min-width: $tablet-width) {
@@ -81,13 +86,13 @@
     padding-bottom: 53px;
 
     &::after {
-      width: 785px;
+      width: 775px;
       height: 17px;
       left: -60px;
-      bottom: 4px;
+      bottom: 8px;
       background-image: url("../img/zigzag-line-mobile.svg");
       background-size: 100%;
-      background-position: 23px 0;
+      background-position: 25px 0;
     }
   }
 
@@ -121,14 +126,14 @@
     width: 292px;
 
     &--bottom {
-      margin-top: -132px;
+      margin-top: -136px;
     }
   }
 
   .best-product__description {
     @include font-params(17px, 30px);
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
     padding-top: 5px;
   }
 
@@ -160,6 +165,7 @@
       width: 1050px;
       height: 23px;
       left: 0;
+      bottom: 6px;
       background-image: url("../img/zigzag-line-mobile.svg");
       background-position: -27px;
       background-size: 100%;
@@ -203,7 +209,7 @@
   }
 
   .best-product__description {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
   }
 
   .best-product__wrapper-tablet {
@@ -218,7 +224,7 @@
   .best-product__field,
   .best-product__value {
     padding-left: 0;
-    padding-top: 8px;
+    padding-top: 7px;
     padding-bottom: 10px;
   }
 
